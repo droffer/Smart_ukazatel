@@ -11,12 +11,15 @@ int main()
     std::cout << "Hello World!\n"<<p<<"\n"<<*p<<"\n";
 
     std::unique_ptr<int[]> arr(new int[10]);
+    std::unique_ptr<int> p1 = std::make_unique<int>(6);
+    std::unique_ptr<int[]> p2 = std::make_unique<int[]>(7);
+    std::cout << p1 << " " << *p1;
 
-    for (int i = 0; i < 10;i++) {
-        std::cin >> arr[i];
+    for (int i = 0; i < 7;i++) {
+        std::cin >> p2[i];
     }
-    for (int i = 0; i < 10; i++) {
-        std::cout << "Значение" <<i<<"-ого"<<"элемента"<< "=" << arr[i] << "\n";
+    for (int i = 0; i < 7; i++) {
+        std::cout << "Значение" <<i<<"-ого"<<"элемента"<< "=" << p2[i] << "\n";
     }
 }
 
